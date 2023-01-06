@@ -2,3 +2,5 @@ __pycache__
 project/env
 .idea
 .DS_Store
+htmlcov
+.coverage
