@@ -1,6 +1,6 @@
 # project/app/db.py
 
-import logging 
+import logging
 import os
 
 from fastapi import FastAPI
@@ -19,6 +19,7 @@ TORTOISE_ORM = {
     },
 }
 
+
 def init_db(app: FastAPI) -> None:
     register_tortoise(
         app,
@@ -27,6 +28,7 @@ def init_db(app: FastAPI) -> None:
         generate_schemas=False,
         add_exception_handlers=True,
     )
+
 
 # new
 async def generate_schema() -> None:

@@ -1,24 +1,23 @@
+from typing import List, Optional
 
 from app.models.pydantic import SummaryPayloadSchema
 from app.models.tortoise import TextSummary
 
-from typing import Optional, List
 
 async def post(payload: SummaryPayloadSchema) -> int:
-  summary = TextSummary(
-    url=payload.url,
-    summary="dummy summary"
-  )
+    summary = TextSummary(url=payload.url, summary="dummy summary")
 
-  await summary.save()
-  return summary.id
+    await summary.save()
+    return summary.id
+
 
 async def get(id: int) -> Optional[dict]:
-  summary = await TextSummary.filter(id=id).first().values()
-  if summary:
-    return summary
-  return None
+    summary = await TextSummary.filter(id=id).first().values()
+    if summary:
+        return summary
+    return None
+
 
 async def get_all() -> List:
-  summaries = await TextSummary.all().values()
-  return summaries
+    summaries = await TextSummary.all().values()
+    return summaries
