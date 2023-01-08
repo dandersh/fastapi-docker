@@ -20,3 +20,9 @@ This repo is for the TDD course for FastAPI and Docker found here: https://testd
 - `docker-compose exec web python -m pytest` --> Run all tests
 - `docker-compose exec web black . --check --exclude="env"` --> Run black formatter while excluding dependencies found in `env` folder
 - `docker-compose exec web isort . --skip="env"` --> Sort imports while excluding `env` folder contents
+
+## TDD approach
+- Add tests for happy path and error to `test_summaries.py`
+- Run them and watch them fail
+- Add route to `summaries.py`
+- Add or update function in `crud.py`
