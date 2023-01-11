@@ -1,5 +1,4 @@
 import logging
-from sys import prefix
 
 from fastapi import FastAPI
 
