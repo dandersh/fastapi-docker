@@ -18,6 +18,7 @@ This repo is for the TDD course for FastAPI and Docker found here: https://testd
 - `docker-compose down -v` --> Bring down all containers
 - `docker-compose exec web-db psql -U postgres` --> Connect to web-db service and view postgres db
 - `docker-compose exec web python -m pytest` --> Run all tests
+- `docker-compose exec web python -m pytest -k 'test_read_summary'` --> Run all tests with the provided test name
 - `docker-compose exec web black . --check --exclude="env"` --> Run black formatter while excluding dependencies found in `env` folder
 - `docker-compose exec web isort . --skip="env"` --> Sort imports while excluding `env` folder contents
 - `docker-compose exec web python -m pytest --cov="."` --> Check test cover of app
