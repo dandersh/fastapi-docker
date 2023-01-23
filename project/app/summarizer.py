@@ -1,5 +1,6 @@
 import nltk
 from newspaper import Article
+
 from app.models.tortoise import TextSummary
 
 
